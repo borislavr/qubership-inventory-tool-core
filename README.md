@@ -1,1 +1,1 @@
-# -qubership-inventory-tool-core
+# Qubership inventory-tool-core library
