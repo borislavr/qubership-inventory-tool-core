@@ -1,0 +1,9 @@
+{
+    "id": "qubership-inventory-tool-core",
+    "name": "Qubership Inventory Tool core",
+    "owner": "TBD",
+    "dnsName": "qubership-inventory-tool-core",
+    "description": "Qubership Inventory Tool core",
+    "type": "library",
+    "framework": "Vertx"
+}
