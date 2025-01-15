@@ -34,7 +34,7 @@
         <freemarker.version>2.3.29</freemarker.version>
         <logback.version>1.2.2</logback.version>
         <junit-jupiter.version>5.4.0</junit-jupiter.version>
-        <groovy.version>3.0.9</groovy.version>
+        <groovy.version>4.0.21</groovy.version>
         <guava.version>31.1-jre</guava.version>
     </properties>
 
@@ -182,7 +182,7 @@
 
         <!-- Groovy for query CLI -->
         <dependency>
-            <groupId>org.codehaus.groovy</groupId>
+            <groupId>org.apache.groovy</groupId>
             <artifactId>groovy</artifactId>
             <version>${groovy.version}</version>
         </dependency>
