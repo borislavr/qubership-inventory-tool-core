@@ -41,7 +41,7 @@ import static org.qubership.itool.utils.LanguageUtils.JAVA_LANGUAGE_NAME;
 import static org.qubership.itool.utils.LanguageUtils.LANGUAGE_PATH_POINTER;
 
 /**
- * <h1>Convert language data model to new format</h1>
+ * <h2>Convert language data model to new format</h2>
  * <p>Old data model:</p>
  * <p>Input edges:</p>
  * <ol>
@@ -50,7 +50,8 @@ import static org.qubership.itool.utils.LanguageUtils.LANGUAGE_PATH_POINTER;
  * </ol>
  * <p>Output edges: not provided</p>
  * <br/>
- * <table border="1" cellspacing="0" cellpadding="2">
+ * <table border="1">
+ * <caption>Old model</caption>
  * <tr><th>Property</th><th>Type</th><th>Mandatory</th><th>Description</th></tr>
  * <tr><td>id</td><td>String</td><td>yes</td><td>Unique Id</td></tr>
  * <tr><td>type</td><td>String</td><td>yes</td><td>Value is "language"</td></tr>
@@ -69,7 +70,8 @@ import static org.qubership.itool.utils.LanguageUtils.LANGUAGE_PATH_POINTER;
  * </ol>
  * <p>Output edges: not provided</p>
  * <br/>
- * <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+ * <table border="1">
+ * <caption>New model</caption>
  * <tr><th>Property</th><th>Type</th><th>Mandatory</th><th>Description</th></tr>
  * <tr><td>id</td><td>String</td><td>yes</td><td>Unique Id (language name + version)</td></tr>
  * <tr><td>type</td><td>String</td><td>yes</td><td>Value is "language"</td></tr>
@@ -83,6 +85,7 @@ public class PatchLanguagesNormalizationTask implements GraphProcessorTask {
     private static final JsonPointer LANGUAGE_SOURCE_VERSION_POINTER = JsonPointer.from("/version/source");
     private static final JsonPointer LANGUAGE_TARGET_VERSION_POINTER = JsonPointer.from("/version/target");
 
+    /** {@inheritDoc} */
     @Override
     public void process(Graph graph) throws InvalidGraphException {
         // In version 3 languages handling was updated
