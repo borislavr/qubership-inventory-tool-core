@@ -37,12 +37,12 @@ import static org.qubership.itool.modules.gremlin2.graph.__.select;
  * =&gt; Create http dependency from component A to component C if it does not exist.
  *
  * <p>USAGE: Needed for both processing set of components in one pass (aka desktop run) and assembly.
- * Run this after {@link CreateTransitiveLibraryDependenciesTask} to use library links created by it.
  */
 public class CreateTransitiveHttpDependenciesTask implements GraphProcessorTask {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CreateTransitiveHttpDependenciesTask.class);
 
+    /** {@inheritDoc} */
     public void process(Graph graph) {
         long startTime = System.nanoTime();
         LOGGER.info("Starting task");

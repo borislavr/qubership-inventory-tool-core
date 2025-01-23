@@ -35,12 +35,12 @@ import static org.qubership.itool.modules.graph.Graph.*;
  * =&gt; Create queue dependency from component A to queue C if it does not exist.
  *
  * <p>USAGE: Needed for both processing set of components in one pass (aka desktop run) and assembly.
- * Run this after {@link CreateTransitiveLibraryDependenciesTask} to use library links created by it.
  */
 public class CreateTransitiveQueueDependenciesTask implements GraphProcessorTask {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CreateTransitiveQueueDependenciesTask.class);
 
+    /** {@inheritDoc} */
     public void process(Graph graph) {
         long startTime = System.nanoTime();
         LOGGER.info("Starting task");
