@@ -21,8 +21,14 @@
     <groupId>org.qubership.cloud.tools</groupId>
     <artifactId>qubership-inventory-tool-core</artifactId>
     <version>${revision}</version>
-
     <packaging>jar</packaging>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>Central Maven Repository</name>
+        </repository>
+    </distributionManagement>
 
     <properties>
         <revision>3.0.0-SNAPSHOT</revision>
@@ -256,6 +262,18 @@
             </plugin>
 
             <plugin>
+                <groupId>org.sonatype.central</groupId>
+                <artifactId>central-publishing-maven-plugin</artifactId>
+                <version>0.6.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <publishingServerId>central</publishingServerId>
+                    <autoPublish>true</autoPublish>
+                    <waitUntil>published</waitUntil>
+                </configuration>
+            </plugin>
+
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.6.3</version>
@@ -270,10 +288,4 @@
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
-        <repository>
-            <id>central</id>
-            <name>Central Maven Repository</name>
-        </repository>
-    </distributionManagement>
 </project>
