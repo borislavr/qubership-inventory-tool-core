@@ -1,3 +1,4 @@
+---
 name: Publish to Maven Central
 
 on:
