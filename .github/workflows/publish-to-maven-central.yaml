@@ -9,7 +9,7 @@ on:
         type: string
 jobs:
   call-maven-publish:
-    uses: Netcracker/qubership-workflow-hub/.github/workflows/maven-publish.yml
+    uses: Netcracker/qubership-workflow-hub/.github/workflows/maven-publish.yml@main
     with:
       maven_command: "clean deploy"
       java_version: '21'
