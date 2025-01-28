@@ -20,7 +20,7 @@ jobs:
     uses: Netcracker/qubership-workflow-hub/.github/workflows/update-pom-release.yml@main
     with:
       file: pom.xml
-      revision: ${{ github.event.inputs.revision }}
+      version: ${{ github.event.inputs.revision }}
 
   git_release:
     uses: Netcracker/qubership-workflow-hub/.github/workflows/create-github-release.yml@main
@@ -37,7 +37,7 @@ jobs:
     with:
       maven_command: "--batch-mode deploy"
       java_version: "21"
-      revision: ${{ github.event.inputs.revision }}
+      version: ${{ github.event.inputs.revision }}
     secrets:
       maven_username: ${{ secrets.MAVEN_USER }}
       maven_password: ${{ secrets.MAVEN_PASSWORD }}
