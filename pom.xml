@@ -18,11 +18,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.qubership.cloud.tools</groupId>
+    <groupId>org.qubership</groupId>
     <artifactId>qubership-inventory-tool-core</artifactId>
     <version>${revision}</version>
     <packaging>jar</packaging>
 
+    <name>${project.groupId}:${project.artifactId}</name>
+    <description>Core library for inventory tool applications</description>
+    <url>https://github.com/Netcracker/qubership-inventory-tool-core</url>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Netcracker</name>
+            <email>opensourcegroup@netcracker.com</email>
+            <organization>Netcracker Technology</organization>
+            <organizationUrl>https://www.netcracker.com</organizationUrl>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git://github.com/Netcracker/qubership-inventory-tool-core.git</connection>
+        <developerConnection>scm:git:ssh://github.com:Netcracker/qubership-inventory-tool-core.git</developerConnection>
+        <url>https://github.com/Netcracker/qubership-inventory-tool-core/tree/main</url>
+    </scm>
     <distributionManagement>
         <repository>
             <id>central</id>
